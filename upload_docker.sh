@@ -7,7 +7,7 @@
 # Step 1:
 # Create dockerpath
 # dockerpath=<your docker ID/path>
-dockerpath=sushma/ml-api:latest
+dockerpath=sushmasri/ml-api:latest
 
 # Step 2:  
 # Authenticate & tag
