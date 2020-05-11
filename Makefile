@@ -8,7 +8,7 @@
 setup:
 	# Create python virtualenv & source it
 	# source ~/.devops/bin/activate
-	python3 -m venv ~/.devops
+	python3 -m venv ~/local_environment
 
 install:
 	# This should be run from inside a virtualenv
@@ -16,7 +16,7 @@ install:
 		pip install -r requirements.txt
 
 test:
-	# Additional, optional, tests could go here
+
 	#python -m pytest -vv --cov=myrepolib tests/*.py
 	#python -m pytest --nbval notebook.ipynb
 
