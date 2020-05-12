@@ -1,1 +1,25 @@
-<paste log output from Kubernetes-mediated prediction, here>
+Terminal 1:
+(venv) sushma@sushma-HP-Pavilion-Laptop-15-cc6xx:~/ml-microservice-kubernetes$ kubectl get pods
+NAME                      READY   STATUS             RESTARTS   AGE
+ml-api-686b8bcdbb-rf85b   0/1     ImagePullBackOff   0          8m21s
+mlapi-64499d88c7-57rf8    1/1     Running            0          6m27s
+(venv) sushma@sushma-HP-Pavilion-Laptop-15-cc6xx:~/ml-microservice-kubernetes$ vim run_kubernetes.sh
+(venv) sushma@sushma-HP-Pavilion-Laptop-15-cc6xx:~/ml-microservice-kubernetes$ ./run_kubernetes.sh
+Error from server (AlreadyExists): deployments.apps "mlapi" already exists
+NAME                      READY   STATUS             RESTARTS   AGE
+ml-api-686b8bcdbb-rf85b   0/1     ImagePullBackOff   0          9m
+mlapi-64499d88c7-57rf8    1/1     Running            0          7m6s
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
+
+Terminal 2:
+(venv) sushma@sushma-HP-Pavilion-Laptop-15-cc6xx:~/ml-microservice-kubernetes$ ./make_prediction.sh
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
+
+
